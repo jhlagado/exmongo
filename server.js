@@ -31,7 +31,7 @@ app.get("/", function (request, response) {
       posts: posts.reverse()
     });
   } catch (err) {
-    console.log("Error: " + err);
+    console.log("Error: " + JSON.stringify(err));
     handleError(err, response);
   }
 });

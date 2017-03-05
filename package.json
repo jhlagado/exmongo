@@ -10,7 +10,7 @@
     "express": "*",
     "body-parser": "*",
     "nunjucks": "^1.3.4",
-    "mongodb": "*",
+    "mongodb":  "*",
     "synchronize": "^0.9.14"
   },
   "keywords": [
