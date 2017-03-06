@@ -2,8 +2,11 @@
 
 var mongodb = require('mongodb');
 // Standard URI format: mongodb://[dbuser:dbpassword@]host:port/dbname, details set in .env
-var MONGODB_URI = 'mongodb://'+process.env.USER+':'+process.env.PASS+'@'+process.env.HOST+':'+process.env.DB_PORT+'/'+process.env.DB;
-console.log(MONGODB_URI);
+// var MONGODB_URI = 'mongodb://'+process.env.USER+':'+process.env.PASS+'@'+process.env.HOST+':'+process.env.DB_PORT+'/'+process.env.DB;
+
+var MONGODB_URI = process.env.MONGODB_URI;
+var MONGODB_COLLECTION = process.env.MONGODB_COLLECTION;
+
 var collection;
 
 // ------------------------------
@@ -94,7 +97,7 @@ function connect() {
     try {
       mongodb.MongoClient.connect(MONGODB_URI, function(err, db) {
         if(err) reject(err);
-        collection = db.collection(process.env.COLLECTION);
+        collection = db.collection(MONGODB_COLLECTION);
         resolve(collection);
       });
     } catch(ex) {
