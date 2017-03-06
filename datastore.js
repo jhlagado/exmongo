@@ -98,7 +98,7 @@ function connect() {
         resolve(collection);
       });
     } catch(ex) {
-      reject(new DatastoreUnknownException("connect", null, ex));
+      reject(new DatastoreUnknownException("connect", null, ex)); 
     }
   });
 }
