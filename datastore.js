@@ -6,6 +6,8 @@ var MONGODB_URI = 'mongodb://'+process.env.USER+':'+process.env.PASS+'@'+process
 console.log(MONGODB_URI);
 var collection;
 
+//???
+
 // Serializes an object to JSON and stores it to the database
 function set(key, value) {
   return new Promise(function (resolve, reject) {
