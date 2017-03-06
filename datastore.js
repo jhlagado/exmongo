@@ -7,7 +7,7 @@ var mongodb = require('mongodb');
 var MONGODB_URI = process.env.MONGODB_URI;
 var MONGODB_COLLECTION = process.env.MONGODB_COLLECTION;
 
-var collection;
+var collection; 
 
 // ------------------------------
 // ASYNCHRONOUS PROMISE-BASED API
